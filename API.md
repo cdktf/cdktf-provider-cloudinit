@@ -196,17 +196,7 @@ public readonly partInput: ConfigPart[];
 
 ---
 
-##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.Config.property.part"></a>
-
-```typescript
-public readonly part: ConfigPart[];
-```
-
-- *Type:* [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)[]
-
----
-
-##### `base64Encode`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.Config.property.base64Encode"></a>
+##### `base64Encode`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.Config.property.base64Encode"></a>
 
 ```typescript
 public readonly base64Encode: boolean | IResolvable;
@@ -216,7 +206,7 @@ public readonly base64Encode: boolean | IResolvable;
 
 ---
 
-##### `boundary`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.Config.property.boundary"></a>
+##### `boundary`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.Config.property.boundary"></a>
 
 ```typescript
 public readonly boundary: string;
@@ -226,13 +216,23 @@ public readonly boundary: string;
 
 ---
 
-##### `gzip`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.Config.property.gzip"></a>
+##### `gzip`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.Config.property.gzip"></a>
 
 ```typescript
 public readonly gzip: boolean | IResolvable;
 ```
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.Config.property.part"></a>
+
+```typescript
+public readonly part: ConfigPart[];
+```
+
+- *Type:* [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)[]
 
 ---
 
@@ -363,17 +363,7 @@ public readonly partInput: DataCloudinitConfigPart[];
 
 ---
 
-##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.part"></a>
-
-```typescript
-public readonly part: DataCloudinitConfigPart[];
-```
-
-- *Type:* [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)[]
-
----
-
-##### `base64Encode`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.base64Encode"></a>
+##### `base64Encode`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.base64Encode"></a>
 
 ```typescript
 public readonly base64Encode: boolean | IResolvable;
@@ -383,7 +373,7 @@ public readonly base64Encode: boolean | IResolvable;
 
 ---
 
-##### `boundary`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.boundary"></a>
+##### `boundary`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.boundary"></a>
 
 ```typescript
 public readonly boundary: string;
@@ -393,13 +383,23 @@ public readonly boundary: string;
 
 ---
 
-##### `gzip`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.gzip"></a>
+##### `gzip`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.gzip"></a>
 
 ```typescript
 public readonly gzip: boolean | IResolvable;
 ```
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.part"></a>
+
+```typescript
+public readonly part: DataCloudinitConfigPart[];
+```
+
+- *Type:* [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)[]
 
 ---
 
