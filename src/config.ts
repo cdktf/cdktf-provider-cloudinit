@@ -45,7 +45,7 @@ export interface ConfigPart {
   readonly mergeType?: string;
 }
 
-function configPartToTerraform(struct?: ConfigPart): any {
+export function configPartToTerraform(struct?: ConfigPart): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -102,11 +102,11 @@ export class Config extends cdktf.TerraformResource {
   // ==========
 
   // base64_encode - computed: false, optional: true, required: false
-  private _base64Encode?: boolean | cdktf.IResolvable | undefined; 
+  private _base64Encode?: boolean | cdktf.IResolvable; 
   public get base64Encode() {
     return this.getBooleanAttribute('base64_encode') as any;
   }
-  public set base64Encode(value: boolean | cdktf.IResolvable | undefined) {
+  public set base64Encode(value: boolean | cdktf.IResolvable) {
     this._base64Encode = value;
   }
   public resetBase64Encode() {
@@ -114,15 +114,15 @@ export class Config extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get base64EncodeInput() {
-    return this._base64Encode
+    return this._base64Encode;
   }
 
   // boundary - computed: false, optional: true, required: false
-  private _boundary?: string | undefined; 
+  private _boundary?: string; 
   public get boundary() {
     return this.getStringAttribute('boundary');
   }
-  public set boundary(value: string | undefined) {
+  public set boundary(value: string) {
     this._boundary = value;
   }
   public resetBoundary() {
@@ -130,15 +130,15 @@ export class Config extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get boundaryInput() {
-    return this._boundary
+    return this._boundary;
   }
 
   // gzip - computed: false, optional: true, required: false
-  private _gzip?: boolean | cdktf.IResolvable | undefined; 
+  private _gzip?: boolean | cdktf.IResolvable; 
   public get gzip() {
     return this.getBooleanAttribute('gzip') as any;
   }
-  public set gzip(value: boolean | cdktf.IResolvable | undefined) {
+  public set gzip(value: boolean | cdktf.IResolvable) {
     this._gzip = value;
   }
   public resetGzip() {
@@ -146,7 +146,7 @@ export class Config extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get gzipInput() {
-    return this._gzip
+    return this._gzip;
   }
 
   // id - computed: true, optional: true, required: false
@@ -170,7 +170,7 @@ export class Config extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get partInput() {
-    return this._part
+    return this._part;
   }
 
   // =========
