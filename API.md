@@ -79,7 +79,7 @@ public readonly alias: string;
 
 ### Config <a name="@cdktf/provider-cloudinit.Config"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html cloudinit_config}.
+Represents a {@link https://www.terraform.io/docs/providers/cloudinit/r/config cloudinit_config}.
 
 #### Initializers <a name="@cdktf/provider-cloudinit.Config.Initializer"></a>
 
@@ -246,7 +246,7 @@ public readonly part: ConfigPart[];
 
 ### DataCloudinitConfig <a name="@cdktf/provider-cloudinit.DataCloudinitConfig"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html cloudinit_config}.
+Represents a {@link https://www.terraform.io/docs/providers/cloudinit/d/config cloudinit_config}.
 
 #### Initializers <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.Initializer"></a>
 
@@ -497,7 +497,7 @@ public readonly part: ConfigPart[];
 
 part block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#part Config#part}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#part Config#part}
 
 ---
 
@@ -509,7 +509,7 @@ public readonly base64Encode: boolean | IResolvable;
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#base64_encode Config#base64_encode}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#base64_encode Config#base64_encode}.
 
 ---
 
@@ -521,7 +521,7 @@ public readonly boundary: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#boundary Config#boundary}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#boundary Config#boundary}.
 
 ---
 
@@ -533,7 +533,7 @@ public readonly gzip: boolean | IResolvable;
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#gzip Config#gzip}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#gzip Config#gzip}.
 
 ---
 
@@ -555,7 +555,7 @@ public readonly content: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#content Config#content}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content Config#content}.
 
 ---
 
@@ -567,7 +567,7 @@ public readonly contentType: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#content_type Config#content_type}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content_type Config#content_type}.
 
 ---
 
@@ -579,7 +579,7 @@ public readonly filename: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#filename Config#filename}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#filename Config#filename}.
 
 ---
 
@@ -591,7 +591,7 @@ public readonly mergeType: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#merge_type Config#merge_type}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#merge_type Config#merge_type}.
 
 ---
 
@@ -655,7 +655,7 @@ public readonly part: DataCloudinitConfigPart[];
 
 part block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#part DataCloudinitConfig#part}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#part DataCloudinitConfig#part}
 
 ---
 
@@ -667,7 +667,7 @@ public readonly base64Encode: boolean | IResolvable;
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#base64_encode DataCloudinitConfig#base64_encode}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#base64_encode DataCloudinitConfig#base64_encode}.
 
 ---
 
@@ -679,7 +679,7 @@ public readonly boundary: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#boundary DataCloudinitConfig#boundary}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#boundary DataCloudinitConfig#boundary}.
 
 ---
 
@@ -691,7 +691,7 @@ public readonly gzip: boolean | IResolvable;
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#gzip DataCloudinitConfig#gzip}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#gzip DataCloudinitConfig#gzip}.
 
 ---
 
@@ -713,7 +713,7 @@ public readonly content: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#content DataCloudinitConfig#content}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content DataCloudinitConfig#content}.
 
 ---
 
@@ -725,7 +725,7 @@ public readonly contentType: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#content_type DataCloudinitConfig#content_type}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content_type DataCloudinitConfig#content_type}.
 
 ---
 
@@ -737,7 +737,7 @@ public readonly filename: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#filename DataCloudinitConfig#filename}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#filename DataCloudinitConfig#filename}.
 
 ---
 
@@ -749,7 +749,7 @@ public readonly mergeType: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#merge_type DataCloudinitConfig#merge_type}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#merge_type DataCloudinitConfig#merge_type}.
 
 ---
 

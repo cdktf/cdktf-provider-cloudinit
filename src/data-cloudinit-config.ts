@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/cloudinit/d/config.html
+// https://www.terraform.io/docs/providers/cloudinit/d/config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface DataCloudinitConfigConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#base64_encode DataCloudinitConfig#base64_encode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#base64_encode DataCloudinitConfig#base64_encode}
   */
   readonly base64Encode?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#boundary DataCloudinitConfig#boundary}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#boundary DataCloudinitConfig#boundary}
   */
   readonly boundary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#gzip DataCloudinitConfig#gzip}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#gzip DataCloudinitConfig#gzip}
   */
   readonly gzip?: boolean | cdktf.IResolvable;
   /**
   * part block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#part DataCloudinitConfig#part}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#part DataCloudinitConfig#part}
   */
   readonly part: DataCloudinitConfigPart[];
 }
 export interface DataCloudinitConfigPart {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#content DataCloudinitConfig#content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content DataCloudinitConfig#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#content_type DataCloudinitConfig#content_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content_type DataCloudinitConfig#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#filename DataCloudinitConfig#filename}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#filename DataCloudinitConfig#filename}
   */
   readonly filename?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html#merge_type DataCloudinitConfig#merge_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#merge_type DataCloudinitConfig#merge_type}
   */
   readonly mergeType?: string;
 }
@@ -60,7 +60,7 @@ export function dataCloudinitConfigPartToTerraform(struct?: DataCloudinitConfigP
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html cloudinit_config}
+* Represents a {@link https://www.terraform.io/docs/providers/cloudinit/d/config cloudinit_config}
 */
 export class DataCloudinitConfig extends cdktf.TerraformDataSource {
 
@@ -74,7 +74,7 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/cloudinit/d/config.html cloudinit_config} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/cloudinit/d/config cloudinit_config} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

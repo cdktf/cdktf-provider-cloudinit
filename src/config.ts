@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/cloudinit/r/config.html
+// https://www.terraform.io/docs/providers/cloudinit/r/config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface ConfigConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#base64_encode Config#base64_encode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#base64_encode Config#base64_encode}
   */
   readonly base64Encode?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#boundary Config#boundary}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#boundary Config#boundary}
   */
   readonly boundary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#gzip Config#gzip}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#gzip Config#gzip}
   */
   readonly gzip?: boolean | cdktf.IResolvable;
   /**
   * part block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#part Config#part}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#part Config#part}
   */
   readonly part: ConfigPart[];
 }
 export interface ConfigPart {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#content Config#content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content Config#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#content_type Config#content_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content_type Config#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#filename Config#filename}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#filename Config#filename}
   */
   readonly filename?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html#merge_type Config#merge_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#merge_type Config#merge_type}
   */
   readonly mergeType?: string;
 }
@@ -60,7 +60,7 @@ export function configPartToTerraform(struct?: ConfigPart): any {
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html cloudinit_config}
+* Represents a {@link https://www.terraform.io/docs/providers/cloudinit/r/config cloudinit_config}
 */
 export class Config extends cdktf.TerraformResource {
 
@@ -74,7 +74,7 @@ export class Config extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/cloudinit/r/config.html cloudinit_config} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/cloudinit/r/config cloudinit_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
