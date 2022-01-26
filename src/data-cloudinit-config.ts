@@ -24,7 +24,7 @@ export interface DataCloudinitConfigConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#part DataCloudinitConfig#part}
   */
-  readonly part: DataCloudinitConfigPart[];
+  readonly part: DataCloudinitConfigPart[] | cdktf.IResolvable;
 }
 export interface DataCloudinitConfigPart {
   /**
@@ -45,8 +45,8 @@ export interface DataCloudinitConfigPart {
   readonly mergeType?: string;
 }
 
-export function dataCloudinitConfigPartToTerraform(struct?: DataCloudinitConfigPart): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataCloudinitConfigPartToTerraform(struct?: DataCloudinitConfigPart | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -104,7 +104,7 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
   // base64_encode - computed: false, optional: true, required: false
   private _base64Encode?: boolean | cdktf.IResolvable; 
   public get base64Encode() {
-    return this.getBooleanAttribute('base64_encode') as any;
+    return this.getBooleanAttribute('base64_encode');
   }
   public set base64Encode(value: boolean | cdktf.IResolvable) {
     this._base64Encode = value;
@@ -136,7 +136,7 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
   // gzip - computed: false, optional: true, required: false
   private _gzip?: boolean | cdktf.IResolvable; 
   public get gzip() {
-    return this.getBooleanAttribute('gzip') as any;
+    return this.getBooleanAttribute('gzip');
   }
   public set gzip(value: boolean | cdktf.IResolvable) {
     this._gzip = value;
@@ -160,12 +160,12 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
   }
 
   // part - computed: false, optional: false, required: true
-  private _part?: DataCloudinitConfigPart[]; 
+  private _part?: DataCloudinitConfigPart[] | cdktf.IResolvable; 
   public get part() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('part') as any;
+    return this.interpolationForAttribute('part');
   }
-  public set part(value: DataCloudinitConfigPart[]) {
+  public set part(value: DataCloudinitConfigPart[] | cdktf.IResolvable) {
     this._part = value;
   }
   // Temporarily expose input value. Use with caution.

@@ -24,7 +24,7 @@ export interface ConfigConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#part Config#part}
   */
-  readonly part: ConfigPart[];
+  readonly part: ConfigPart[] | cdktf.IResolvable;
 }
 export interface ConfigPart {
   /**
@@ -45,8 +45,8 @@ export interface ConfigPart {
   readonly mergeType?: string;
 }
 
-export function configPartToTerraform(struct?: ConfigPart): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function configPartToTerraform(struct?: ConfigPart | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -104,7 +104,7 @@ export class Config extends cdktf.TerraformResource {
   // base64_encode - computed: false, optional: true, required: false
   private _base64Encode?: boolean | cdktf.IResolvable; 
   public get base64Encode() {
-    return this.getBooleanAttribute('base64_encode') as any;
+    return this.getBooleanAttribute('base64_encode');
   }
   public set base64Encode(value: boolean | cdktf.IResolvable) {
     this._base64Encode = value;
@@ -136,7 +136,7 @@ export class Config extends cdktf.TerraformResource {
   // gzip - computed: false, optional: true, required: false
   private _gzip?: boolean | cdktf.IResolvable; 
   public get gzip() {
-    return this.getBooleanAttribute('gzip') as any;
+    return this.getBooleanAttribute('gzip');
   }
   public set gzip(value: boolean | cdktf.IResolvable) {
     this._gzip = value;
@@ -160,12 +160,12 @@ export class Config extends cdktf.TerraformResource {
   }
 
   // part - computed: false, optional: false, required: true
-  private _part?: ConfigPart[]; 
+  private _part?: ConfigPart[] | cdktf.IResolvable; 
   public get part() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('part') as any;
+    return this.interpolationForAttribute('part');
   }
-  public set part(value: ConfigPart[]) {
+  public set part(value: ConfigPart[] | cdktf.IResolvable) {
     this._part = value;
   }
   // Temporarily expose input value. Use with caution.
