@@ -189,10 +189,10 @@ public readonly gzipInput: boolean | IResolvable;
 ##### `partInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.Config.property.partInput"></a>
 
 ```typescript
-public readonly partInput: ConfigPart[];
+public readonly partInput: IResolvable | ConfigPart[];
 ```
 
-- *Type:* [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)[]
 
 ---
 
@@ -229,10 +229,10 @@ public readonly gzip: boolean | IResolvable;
 ##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.Config.property.part"></a>
 
 ```typescript
-public readonly part: ConfigPart[];
+public readonly part: IResolvable | ConfigPart[];
 ```
 
-- *Type:* [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)[]
 
 ---
 
@@ -356,10 +356,10 @@ public readonly gzipInput: boolean | IResolvable;
 ##### `partInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.partInput"></a>
 
 ```typescript
-public readonly partInput: DataCloudinitConfigPart[];
+public readonly partInput: IResolvable | DataCloudinitConfigPart[];
 ```
 
-- *Type:* [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)[]
 
 ---
 
@@ -396,10 +396,10 @@ public readonly gzip: boolean | IResolvable;
 ##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.part"></a>
 
 ```typescript
-public readonly part: DataCloudinitConfigPart[];
+public readonly part: IResolvable | DataCloudinitConfigPart[];
 ```
 
-- *Type:* [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)[]
 
 ---
 
@@ -450,10 +450,10 @@ const configConfig: ConfigConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -490,10 +490,10 @@ public readonly provider: TerraformProvider;
 ##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigConfig.property.part"></a>
 
 ```typescript
-public readonly part: ConfigPart[];
+public readonly part: IResolvable | ConfigPart[];
 ```
 
-- *Type:* [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)[]
 
 part block.
 
@@ -608,10 +608,10 @@ const dataCloudinitConfigConfig: DataCloudinitConfigConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -648,10 +648,10 @@ public readonly provider: TerraformProvider;
 ##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigConfig.property.part"></a>
 
 ```typescript
-public readonly part: DataCloudinitConfigPart[];
+public readonly part: IResolvable | DataCloudinitConfigPart[];
 ```
 
-- *Type:* [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)[]
 
 part block.
 
