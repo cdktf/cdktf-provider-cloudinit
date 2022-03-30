@@ -67,7 +67,7 @@ export class Config extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "cloudinit_config";
+  public static readonly tfResourceType = "cloudinit_config";
 
   // ===========
   // INITIALIZER
@@ -84,7 +84,9 @@ export class Config extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'cloudinit_config',
       terraformGeneratorMetadata: {
-        providerName: 'cloudinit'
+        providerName: 'cloudinit',
+        providerVersion: '2.2.0',
+        providerVersionConstraint: '~> 2.2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
