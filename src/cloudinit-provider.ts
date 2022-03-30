@@ -23,7 +23,7 @@ export class CloudinitProvider extends cdktf.TerraformProvider {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "cloudinit";
+  public static readonly tfResourceType = "cloudinit";
 
   // ===========
   // INITIALIZER
@@ -41,6 +41,7 @@ export class CloudinitProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'cloudinit',
       terraformGeneratorMetadata: {
         providerName: 'cloudinit',
+        providerVersion: '2.2.0',
         providerVersionConstraint: '~> 2.2.0'
       },
       terraformProviderSource: 'hashicorp/cloudinit'
