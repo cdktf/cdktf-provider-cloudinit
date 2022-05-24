@@ -115,6 +115,18 @@ Must be unique amongst siblings in the same scope
 
 #### Methods <a name="Methods"></a>
 
+##### `putPart` <a name="@cdktf/provider-cloudinit.Config.putPart"></a>
+
+```typescript
+public putPart(value: IResolvable | ConfigPart[])
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.Config.parameter.value"></a>
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)[]
+
+---
+
 ##### `resetBase64Encode` <a name="@cdktf/provider-cloudinit.Config.resetBase64Encode"></a>
 
 ```typescript
@@ -133,16 +145,22 @@ public resetBoundary()
 public resetGzip()
 ```
 
+##### `resetId` <a name="@cdktf/provider-cloudinit.Config.resetId"></a>
+
+```typescript
+public resetId()
+```
+
 
 #### Properties <a name="Properties"></a>
 
-##### `id`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.Config.property.id"></a>
+##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.Config.property.part"></a>
 
 ```typescript
-public readonly id: string;
+public readonly part: ConfigPartList;
 ```
 
-- *Type:* `string`
+- *Type:* [`@cdktf/provider-cloudinit.ConfigPartList`](#@cdktf/provider-cloudinit.ConfigPartList)
 
 ---
 
@@ -186,6 +204,16 @@ public readonly gzipInput: boolean | IResolvable;
 
 ---
 
+##### `idInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.Config.property.idInput"></a>
+
+```typescript
+public readonly idInput: string;
+```
+
+- *Type:* `string`
+
+---
+
 ##### `partInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.Config.property.partInput"></a>
 
 ```typescript
@@ -226,13 +254,13 @@ public readonly gzip: boolean | IResolvable;
 
 ---
 
-##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.Config.property.part"></a>
+##### `id`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.Config.property.id"></a>
 
 ```typescript
-public readonly part: IResolvable | ConfigPart[];
+public readonly id: string;
 ```
 
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)[]
+- *Type:* `string`
 
 ---
 
@@ -282,6 +310,18 @@ Must be unique amongst siblings in the same scope
 
 #### Methods <a name="Methods"></a>
 
+##### `putPart` <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.putPart"></a>
+
+```typescript
+public putPart(value: IResolvable | DataCloudinitConfigPart[])
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.parameter.value"></a>
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)[]
+
+---
+
 ##### `resetBase64Encode` <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.resetBase64Encode"></a>
 
 ```typescript
@@ -300,16 +340,22 @@ public resetBoundary()
 public resetGzip()
 ```
 
+##### `resetId` <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.resetId"></a>
+
+```typescript
+public resetId()
+```
+
 
 #### Properties <a name="Properties"></a>
 
-##### `id`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.id"></a>
+##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.part"></a>
 
 ```typescript
-public readonly id: string;
+public readonly part: DataCloudinitConfigPartList;
 ```
 
-- *Type:* `string`
+- *Type:* [`@cdktf/provider-cloudinit.DataCloudinitConfigPartList`](#@cdktf/provider-cloudinit.DataCloudinitConfigPartList)
 
 ---
 
@@ -353,6 +399,16 @@ public readonly gzipInput: boolean | IResolvable;
 
 ---
 
+##### `idInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.idInput"></a>
+
+```typescript
+public readonly idInput: string;
+```
+
+- *Type:* `string`
+
+---
+
 ##### `partInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.partInput"></a>
 
 ```typescript
@@ -393,13 +449,13 @@ public readonly gzip: boolean | IResolvable;
 
 ---
 
-##### `part`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.part"></a>
+##### `id`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfig.property.id"></a>
 
 ```typescript
-public readonly part: IResolvable | DataCloudinitConfigPart[];
+public readonly id: string;
 ```
 
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)[]
+- *Type:* `string`
 
 ---
 
@@ -534,6 +590,21 @@ public readonly gzip: boolean | IResolvable;
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#gzip Config#gzip}.
+
+---
+
+##### `id`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigConfig.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#id Config#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 
 ---
 
@@ -695,6 +766,21 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloud
 
 ---
 
+##### `id`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigConfig.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#id DataCloudinitConfig#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
 ### DataCloudinitConfigPart <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPart"></a>
 
 #### Initializer <a name="[object Object].Initializer"></a>
@@ -750,6 +836,447 @@ public readonly mergeType: string;
 - *Type:* `string`
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#merge_type DataCloudinitConfig#merge_type}.
+
+---
+
+## Classes <a name="Classes"></a>
+
+### ConfigPartList <a name="@cdktf/provider-cloudinit.ConfigPartList"></a>
+
+#### Initializers <a name="@cdktf/provider-cloudinit.ConfigPartList.Initializer"></a>
+
+```typescript
+import { ConfigPartList } from '@cdktf/provider-cloudinit'
+
+new ConfigPartList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartList.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartList.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartList.parameter.wrapsSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `get` <a name="@cdktf/provider-cloudinit.ConfigPartList.get"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartList.parameter.index"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties"></a>
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigPartList.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | ConfigPart[];
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)[]
+
+---
+
+
+### ConfigPartOutputReference <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.Initializer"></a>
+
+```typescript
+import { ConfigPartOutputReference } from '@cdktf/provider-cloudinit'
+
+new ConfigPartOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.parameter.complexObjectIndex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `resetContentType` <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.resetContentType"></a>
+
+```typescript
+public resetContentType()
+```
+
+##### `resetFilename` <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.resetFilename"></a>
+
+```typescript
+public resetFilename()
+```
+
+##### `resetMergeType` <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.resetMergeType"></a>
+
+```typescript
+public resetMergeType()
+```
+
+
+#### Properties <a name="Properties"></a>
+
+##### `contentInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.property.contentInput"></a>
+
+```typescript
+public readonly contentInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `contentTypeInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.property.contentTypeInput"></a>
+
+```typescript
+public readonly contentTypeInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `filenameInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.property.filenameInput"></a>
+
+```typescript
+public readonly filenameInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `mergeTypeInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.property.mergeTypeInput"></a>
+
+```typescript
+public readonly mergeTypeInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `content`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.property.content"></a>
+
+```typescript
+public readonly content: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `contentType`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.property.contentType"></a>
+
+```typescript
+public readonly contentType: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `filename`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.property.filename"></a>
+
+```typescript
+public readonly filename: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `mergeType`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.property.mergeType"></a>
+
+```typescript
+public readonly mergeType: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigPartOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | ConfigPart;
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.ConfigPart`](#@cdktf/provider-cloudinit.ConfigPart)
+
+---
+
+
+### DataCloudinitConfigPartList <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartList"></a>
+
+#### Initializers <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartList.Initializer"></a>
+
+```typescript
+import { DataCloudinitConfigPartList } from '@cdktf/provider-cloudinit'
+
+new DataCloudinitConfigPartList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartList.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartList.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartList.parameter.wrapsSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `get` <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartList.get"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartList.parameter.index"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties"></a>
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartList.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | DataCloudinitConfigPart[];
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)[]
+
+---
+
+
+### DataCloudinitConfigPartOutputReference <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.Initializer"></a>
+
+```typescript
+import { DataCloudinitConfigPartOutputReference } from '@cdktf/provider-cloudinit'
+
+new DataCloudinitConfigPartOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.parameter.complexObjectIndex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `resetContentType` <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.resetContentType"></a>
+
+```typescript
+public resetContentType()
+```
+
+##### `resetFilename` <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.resetFilename"></a>
+
+```typescript
+public resetFilename()
+```
+
+##### `resetMergeType` <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.resetMergeType"></a>
+
+```typescript
+public resetMergeType()
+```
+
+
+#### Properties <a name="Properties"></a>
+
+##### `contentInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.property.contentInput"></a>
+
+```typescript
+public readonly contentInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `contentTypeInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.property.contentTypeInput"></a>
+
+```typescript
+public readonly contentTypeInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `filenameInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.property.filenameInput"></a>
+
+```typescript
+public readonly filenameInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `mergeTypeInput`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.property.mergeTypeInput"></a>
+
+```typescript
+public readonly mergeTypeInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `content`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.property.content"></a>
+
+```typescript
+public readonly content: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `contentType`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.property.contentType"></a>
+
+```typescript
+public readonly contentType: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `filename`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.property.filename"></a>
+
+```typescript
+public readonly filename: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `mergeType`<sup>Required</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.property.mergeType"></a>
+
+```typescript
+public readonly mergeType: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigPartOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | DataCloudinitConfigPart;
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-cloudinit.DataCloudinitConfigPart`](#@cdktf/provider-cloudinit.DataCloudinitConfigPart)
 
 ---
 
