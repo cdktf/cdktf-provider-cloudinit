@@ -503,6 +503,16 @@ import { ConfigConfig } from '@cdktf/provider-cloudinit'
 const configConfig: ConfigConfig = { ... }
 ```
 
+##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigConfig.property.connection"></a>
+
+```typescript
+public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+```
+
+- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
+
+---
+
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigConfig.property.count"></a>
 
 ```typescript
@@ -523,6 +533,16 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
+##### `forEach`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator)
+
+---
+
 ##### `lifecycle`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigConfig.property.lifecycle"></a>
 
 ```typescript
@@ -540,6 +560,16 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* [`cdktf.TerraformProvider`](#cdktf.TerraformProvider)
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.ConfigConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+```
+
+- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
 
 ---
 
@@ -676,6 +706,16 @@ import { DataCloudinitConfigConfig } from '@cdktf/provider-cloudinit'
 const dataCloudinitConfigConfig: DataCloudinitConfigConfig = { ... }
 ```
 
+##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigConfig.property.connection"></a>
+
+```typescript
+public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+```
+
+- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
+
+---
+
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigConfig.property.count"></a>
 
 ```typescript
@@ -696,6 +736,16 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
+##### `forEach`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator)
+
+---
+
 ##### `lifecycle`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigConfig.property.lifecycle"></a>
 
 ```typescript
@@ -713,6 +763,16 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* [`cdktf.TerraformProvider`](#cdktf.TerraformProvider)
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-cloudinit.DataCloudinitConfigConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+```
+
+- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
 
 ---
 
