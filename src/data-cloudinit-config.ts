@@ -236,7 +236,7 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
       terraformGeneratorMetadata: {
         providerName: 'cloudinit',
         providerVersion: '2.2.0',
-        providerVersionConstraint: '~> 2.2.0'
+        providerVersionConstraint: '~> 2.2'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

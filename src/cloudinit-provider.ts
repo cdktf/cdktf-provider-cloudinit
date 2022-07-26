@@ -42,7 +42,7 @@ export class CloudinitProvider extends cdktf.TerraformProvider {
       terraformGeneratorMetadata: {
         providerName: 'cloudinit',
         providerVersion: '2.2.0',
-        providerVersionConstraint: '~> 2.2.0'
+        providerVersionConstraint: '~> 2.2'
       },
       terraformProviderSource: 'hashicorp/cloudinit'
     });
