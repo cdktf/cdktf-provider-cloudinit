@@ -241,7 +241,10 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._base64Encode = config.base64Encode;
     this._boundary = config.boundary;
@@ -346,7 +349,7 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
       boundary: cdktf.stringToTerraform(this._boundary),
       gzip: cdktf.booleanToTerraform(this._gzip),
       id: cdktf.stringToTerraform(this._id),
-      part: cdktf.listMapper(dataCloudinitConfigPartToTerraform)(this._part.internalValue),
+      part: cdktf.listMapper(dataCloudinitConfigPartToTerraform, true)(this._part.internalValue),
     };
   }
 }
