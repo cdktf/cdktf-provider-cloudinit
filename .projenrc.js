@@ -1,6 +1,6 @@
 const { CdktfProviderProject } = require("@cdktf/provider-project");
 const project = new CdktfProviderProject({
-  terraformProvider: "hashicorp/cloudinit@~> 2.2.0",
+  terraformProvider: "hashicorp/cloudinit@~> 2.2",
   cdktfVersion: "^0.11.0",
   constructsVersion: "^10.0.0",
   minNodeVersion: "14.17.0",
