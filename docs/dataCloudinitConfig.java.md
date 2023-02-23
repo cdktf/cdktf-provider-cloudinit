@@ -22,14 +22,13 @@ DataCloudinitConfig.Builder.create(Construct scope, java.lang.String id)
 //  .provisioners(java.util.List<FileProvisioner)
 //  .provisioners(LocalExecProvisioner)
 //  .provisioners(RemoteExecProvisioner>)
-    .part(IResolvable)
-    .part(java.util.List<DataCloudinitConfigPart>)
 //  .base64Encode(java.lang.Boolean)
 //  .base64Encode(IResolvable)
 //  .boundary(java.lang.String)
 //  .gzip(java.lang.Boolean)
 //  .gzip(IResolvable)
-//  .id(java.lang.String)
+//  .part(IResolvable)
+//  .part(java.util.List<DataCloudinitConfigPart>)
     .build();
 ```
 
@@ -44,11 +43,10 @@ DataCloudinitConfig.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.base64Encode">base64Encode</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Specify whether or not to base64 encode the `rendered` output. |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.boundary">boundary</a></code> | <code>java.lang.String</code> | Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`. |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.gzip">gzip</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Specify whether or not to gzip the `rendered` output. Defaults to `true`. |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.part">part</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart">DataCloudinitConfigPart</a>></code> | part block. |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.base64Encode">base64Encode</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#base64_encode DataCloudinitConfig#base64_encode}. |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.boundary">boundary</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#boundary DataCloudinitConfig#boundary}. |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.gzip">gzip</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#gzip DataCloudinitConfig#gzip}. |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#id DataCloudinitConfig#id}. |
 
 ---
 
@@ -112,21 +110,15 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `part`<sup>Required</sup> <a name="part" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.part"></a>
-
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart">DataCloudinitConfigPart</a>>
-
-part block.
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#part DataCloudinitConfig#part}
-
----
-
 ##### `base64Encode`<sup>Optional</sup> <a name="base64Encode" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.base64Encode"></a>
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#base64_encode DataCloudinitConfig#base64_encode}.
+Specify whether or not to base64 encode the `rendered` output.
+
+Defaults to `true`, and cannot be disabled if gzip is `true`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#base64_encode DataCloudinitConfig#base64_encode}
 
 ---
 
@@ -134,7 +126,9 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloud
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#boundary DataCloudinitConfig#boundary}.
+Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#boundary DataCloudinitConfig#boundary}
 
 ---
 
@@ -142,18 +136,19 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloud
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#gzip DataCloudinitConfig#gzip}.
+Specify whether or not to gzip the `rendered` output. Defaults to `true`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#gzip DataCloudinitConfig#gzip}
 
 ---
 
-##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.id"></a>
+##### `part`<sup>Optional</sup> <a name="part" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer.parameter.part"></a>
 
-- *Type:* java.lang.String
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart">DataCloudinitConfigPart</a>>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#id DataCloudinitConfig#id}.
+part block.
 
-Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#part DataCloudinitConfig#part}
 
 ---
 
@@ -181,7 +176,7 @@ If you experience problems setting this value it might not be settable. Please t
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.resetBase64Encode">resetBase64Encode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.resetBoundary">resetBoundary</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.resetGzip">resetGzip</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.resetPart">resetPart</a></code> | *No description.* |
 
 ---
 
@@ -399,10 +394,10 @@ public void resetBoundary()
 public void resetGzip()
 ```
 
-##### `resetId` <a name="resetId" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.resetId"></a>
+##### `resetPart` <a name="resetPart" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.resetPart"></a>
 
 ```java
-public void resetId()
+public void resetPart()
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
@@ -491,17 +486,16 @@ DataCloudinitConfig.isTerraformDataSource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.part">part</a></code> | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList">DataCloudinitConfigPartList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.rendered">rendered</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.base64EncodeInput">base64EncodeInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.boundaryInput">boundaryInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.gzipInput">gzipInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.partInput">partInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart">DataCloudinitConfigPart</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.base64Encode">base64Encode</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.boundary">boundary</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.gzip">gzip</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 
 ---
 
@@ -627,6 +621,16 @@ public TerraformProvider getProvider();
 
 ---
 
+##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.id"></a>
+
+```java
+public java.lang.String getId();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `part`<sup>Required</sup> <a name="part" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.part"></a>
 
 ```java
@@ -677,16 +681,6 @@ public java.lang.Object getGzipInput();
 
 ---
 
-##### `idInput`<sup>Optional</sup> <a name="idInput" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.idInput"></a>
-
-```java
-public java.lang.String getIdInput();
-```
-
-- *Type:* java.lang.String
-
----
-
 ##### `partInput`<sup>Optional</sup> <a name="partInput" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.partInput"></a>
 
 ```java
@@ -724,16 +718,6 @@ public java.lang.Object getGzip();
 ```
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
-
----
-
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.id"></a>
-
-```java
-public java.lang.String getId();
-```
-
-- *Type:* java.lang.String
 
 ---
 
@@ -775,14 +759,13 @@ DataCloudinitConfigConfig.builder()
 //  .provisioners(java.util.List<FileProvisioner)
 //  .provisioners(LocalExecProvisioner)
 //  .provisioners(RemoteExecProvisioner>)
-    .part(IResolvable)
-    .part(java.util.List<DataCloudinitConfigPart>)
 //  .base64Encode(java.lang.Boolean)
 //  .base64Encode(IResolvable)
 //  .boundary(java.lang.String)
 //  .gzip(java.lang.Boolean)
 //  .gzip(IResolvable)
-//  .id(java.lang.String)
+//  .part(IResolvable)
+//  .part(java.util.List<DataCloudinitConfigPart>)
     .build();
 ```
 
@@ -797,11 +780,10 @@ DataCloudinitConfigConfig.builder()
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.base64Encode">base64Encode</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Specify whether or not to base64 encode the `rendered` output. |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.boundary">boundary</a></code> | <code>java.lang.String</code> | Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`. |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.gzip">gzip</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Specify whether or not to gzip the `rendered` output. Defaults to `true`. |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.part">part</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart">DataCloudinitConfigPart</a>></code> | part block. |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.base64Encode">base64Encode</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#base64_encode DataCloudinitConfig#base64_encode}. |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.boundary">boundary</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#boundary DataCloudinitConfig#boundary}. |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.gzip">gzip</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#gzip DataCloudinitConfig#gzip}. |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#id DataCloudinitConfig#id}. |
 
 ---
 
@@ -875,20 +857,6 @@ public java.lang.Object getProvisioners();
 
 ---
 
-##### `part`<sup>Required</sup> <a name="part" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.part"></a>
-
-```java
-public java.lang.Object getPart();
-```
-
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart">DataCloudinitConfigPart</a>>
-
-part block.
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#part DataCloudinitConfig#part}
-
----
-
 ##### `base64Encode`<sup>Optional</sup> <a name="base64Encode" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.base64Encode"></a>
 
 ```java
@@ -897,7 +865,11 @@ public java.lang.Object getBase64Encode();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#base64_encode DataCloudinitConfig#base64_encode}.
+Specify whether or not to base64 encode the `rendered` output.
+
+Defaults to `true`, and cannot be disabled if gzip is `true`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#base64_encode DataCloudinitConfig#base64_encode}
 
 ---
 
@@ -909,7 +881,9 @@ public java.lang.String getBoundary();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#boundary DataCloudinitConfig#boundary}.
+Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#boundary DataCloudinitConfig#boundary}
 
 ---
 
@@ -921,22 +895,23 @@ public java.lang.Object getGzip();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#gzip DataCloudinitConfig#gzip}.
+Specify whether or not to gzip the `rendered` output. Defaults to `true`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#gzip DataCloudinitConfig#gzip}
 
 ---
 
-##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.id"></a>
+##### `part`<sup>Optional</sup> <a name="part" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.part"></a>
 
 ```java
-public java.lang.String getId();
+public java.lang.Object getPart();
 ```
 
-- *Type:* java.lang.String
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart">DataCloudinitConfigPart</a>>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#id DataCloudinitConfig#id}.
+part block.
 
-Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#part DataCloudinitConfig#part}
 
 ---
 
@@ -959,10 +934,10 @@ DataCloudinitConfigPart.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart.property.content">content</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content DataCloudinitConfig#content}. |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart.property.contentType">contentType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content_type DataCloudinitConfig#content_type}. |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart.property.filename">filename</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#filename DataCloudinitConfig#filename}. |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart.property.mergeType">mergeType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#merge_type DataCloudinitConfig#merge_type}. |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart.property.content">content</a></code> | <code>java.lang.String</code> | Body content for the part. |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart.property.contentType">contentType</a></code> | <code>java.lang.String</code> | A MIME-style content type to report in the header for the part. Defaults to `text/plain`. |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart.property.filename">filename</a></code> | <code>java.lang.String</code> | A filename to report in the header for the part. |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart.property.mergeType">mergeType</a></code> | <code>java.lang.String</code> | A value for the `X-Merge-Type` header of the part, to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/reference/merging.html). |
 
 ---
 
@@ -974,7 +949,9 @@ public java.lang.String getContent();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content DataCloudinitConfig#content}.
+Body content for the part.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content DataCloudinitConfig#content}
 
 ---
 
@@ -986,7 +963,9 @@ public java.lang.String getContentType();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content_type DataCloudinitConfig#content_type}.
+A MIME-style content type to report in the header for the part. Defaults to `text/plain`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content_type DataCloudinitConfig#content_type}
 
 ---
 
@@ -998,7 +977,9 @@ public java.lang.String getFilename();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#filename DataCloudinitConfig#filename}.
+A filename to report in the header for the part.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#filename DataCloudinitConfig#filename}
 
 ---
 
@@ -1010,7 +991,9 @@ public java.lang.String getMergeType();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#merge_type DataCloudinitConfig#merge_type}.
+A value for the `X-Merge-Type` header of the part, to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/reference/merging.html).
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#merge_type DataCloudinitConfig#merge_type}
 
 ---
 

@@ -8,45 +8,52 @@ import * as cdktf from 'cdktf';
 
 export interface DataCloudinitConfigConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Specify whether or not to base64 encode the `rendered` output. Defaults to `true`, and cannot be disabled if gzip is `true`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#base64_encode DataCloudinitConfig#base64_encode}
   */
   readonly base64Encode?: boolean | cdktf.IResolvable;
   /**
+  * Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#boundary DataCloudinitConfig#boundary}
   */
   readonly boundary?: string;
   /**
+  * Specify whether or not to gzip the `rendered` output. Defaults to `true`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#gzip DataCloudinitConfig#gzip}
   */
   readonly gzip?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#id DataCloudinitConfig#id}
-  *
-  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-  */
-  readonly id?: string;
   /**
   * part block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#part DataCloudinitConfig#part}
   */
-  readonly part: DataCloudinitConfigPart[] | cdktf.IResolvable;
+  readonly part?: DataCloudinitConfigPart[] | cdktf.IResolvable;
 }
 export interface DataCloudinitConfigPart {
   /**
+  * Body content for the part.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content DataCloudinitConfig#content}
   */
   readonly content: string;
   /**
+  * A MIME-style content type to report in the header for the part. Defaults to `text/plain`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content_type DataCloudinitConfig#content_type}
   */
   readonly contentType?: string;
   /**
+  * A filename to report in the header for the part.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#filename DataCloudinitConfig#filename}
   */
   readonly filename?: string;
   /**
+  * A value for the `X-Merge-Type` header of the part, to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/reference/merging.html).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#merge_type DataCloudinitConfig#merge_type}
   */
   readonly mergeType?: string;
@@ -140,7 +147,7 @@ export class DataCloudinitConfigPartOutputReference extends cdktf.ComplexObject 
     return this._content;
   }
 
-  // content_type - computed: false, optional: true, required: false
+  // content_type - computed: true, optional: true, required: false
   private _contentType?: string; 
   public get contentType() {
     return this.getStringAttribute('content_type');
@@ -228,14 +235,14 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataCloudinitConfigConfig
+  * @param options DataCloudinitConfigConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataCloudinitConfigConfig) {
+  public constructor(scope: Construct, id: string, config: DataCloudinitConfigConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'cloudinit_config',
       terraformGeneratorMetadata: {
         providerName: 'cloudinit',
-        providerVersion: '2.2.0',
+        providerVersion: '2.3.1',
         providerVersionConstraint: '~> 2.2'
       },
       provider: config.provider,
@@ -249,7 +256,6 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
     this._base64Encode = config.base64Encode;
     this._boundary = config.boundary;
     this._gzip = config.gzip;
-    this._id = config.id;
     this._part.internalValue = config.part;
   }
 
@@ -257,7 +263,7 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // base64_encode - computed: false, optional: true, required: false
+  // base64_encode - computed: true, optional: true, required: false
   private _base64Encode?: boolean | cdktf.IResolvable; 
   public get base64Encode() {
     return this.getBooleanAttribute('base64_encode');
@@ -273,7 +279,7 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
     return this._base64Encode;
   }
 
-  // boundary - computed: false, optional: true, required: false
+  // boundary - computed: true, optional: true, required: false
   private _boundary?: string; 
   public get boundary() {
     return this.getStringAttribute('boundary');
@@ -289,7 +295,7 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
     return this._boundary;
   }
 
-  // gzip - computed: false, optional: true, required: false
+  // gzip - computed: true, optional: true, required: false
   private _gzip?: boolean | cdktf.IResolvable; 
   public get gzip() {
     return this.getBooleanAttribute('gzip');
@@ -305,20 +311,9 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
     return this._gzip;
   }
 
-  // id - computed: true, optional: true, required: false
-  private _id?: string; 
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
-  }
-  public set id(value: string) {
-    this._id = value;
-  }
-  public resetId() {
-    this._id = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get idInput() {
-    return this._id;
   }
 
   // rendered - computed: true, optional: false, required: false
@@ -326,13 +321,16 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
     return this.getStringAttribute('rendered');
   }
 
-  // part - computed: false, optional: false, required: true
+  // part - computed: false, optional: true, required: false
   private _part = new DataCloudinitConfigPartList(this, "part", false);
   public get part() {
     return this._part;
   }
   public putPart(value: DataCloudinitConfigPart[] | cdktf.IResolvable) {
     this._part.internalValue = value;
+  }
+  public resetPart() {
+    this._part.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get partInput() {
@@ -348,7 +346,6 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
       base64_encode: cdktf.booleanToTerraform(this._base64Encode),
       boundary: cdktf.stringToTerraform(this._boundary),
       gzip: cdktf.booleanToTerraform(this._gzip),
-      id: cdktf.stringToTerraform(this._id),
       part: cdktf.listMapper(dataCloudinitConfigPartToTerraform, true)(this._part.internalValue),
     };
   }

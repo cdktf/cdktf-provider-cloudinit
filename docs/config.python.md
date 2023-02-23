@@ -21,11 +21,10 @@ config.Config(
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
   provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
-  part: typing.Union[IResolvable, typing.List[ConfigPart]],
   base64_encode: typing.Union[bool, IResolvable] = None,
   boundary: str = None,
   gzip: typing.Union[bool, IResolvable] = None,
-  id: str = None
+  part: typing.Union[IResolvable, typing.List[ConfigPart]] = None
 )
 ```
 
@@ -40,11 +39,10 @@ config.Config(
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.config.Config.Initializer.parameter.base64Encode">base64_encode</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Specify whether or not to base64 encode the `rendered` output. |
+| <code><a href="#@cdktf/provider-cloudinit.config.Config.Initializer.parameter.boundary">boundary</a></code> | <code>str</code> | Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`. |
+| <code><a href="#@cdktf/provider-cloudinit.config.Config.Initializer.parameter.gzip">gzip</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Specify whether or not to gzip the `rendered` output. Defaults to `true`. |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.Initializer.parameter.part">part</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-cloudinit.config.ConfigPart">ConfigPart</a>]]</code> | part block. |
-| <code><a href="#@cdktf/provider-cloudinit.config.Config.Initializer.parameter.base64Encode">base64_encode</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#base64_encode Config#base64_encode}. |
-| <code><a href="#@cdktf/provider-cloudinit.config.Config.Initializer.parameter.boundary">boundary</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#boundary Config#boundary}. |
-| <code><a href="#@cdktf/provider-cloudinit.config.Config.Initializer.parameter.gzip">gzip</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#gzip Config#gzip}. |
-| <code><a href="#@cdktf/provider-cloudinit.config.Config.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#id Config#id}. |
 
 ---
 
@@ -108,21 +106,15 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `part`<sup>Required</sup> <a name="part" id="@cdktf/provider-cloudinit.config.Config.Initializer.parameter.part"></a>
-
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-cloudinit.config.ConfigPart">ConfigPart</a>]]
-
-part block.
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#part Config#part}
-
----
-
 ##### `base64_encode`<sup>Optional</sup> <a name="base64_encode" id="@cdktf/provider-cloudinit.config.Config.Initializer.parameter.base64Encode"></a>
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#base64_encode Config#base64_encode}.
+Specify whether or not to base64 encode the `rendered` output.
+
+Defaults to `true`, and cannot be disabled if gzip is `true`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#base64_encode Config#base64_encode}
 
 ---
 
@@ -130,7 +122,9 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloud
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#boundary Config#boundary}.
+Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#boundary Config#boundary}
 
 ---
 
@@ -138,18 +132,19 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloud
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#gzip Config#gzip}.
+Specify whether or not to gzip the `rendered` output. Defaults to `true`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#gzip Config#gzip}
 
 ---
 
-##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-cloudinit.config.Config.Initializer.parameter.id"></a>
+##### `part`<sup>Optional</sup> <a name="part" id="@cdktf/provider-cloudinit.config.Config.Initializer.parameter.part"></a>
 
-- *Type:* str
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-cloudinit.config.ConfigPart">ConfigPart</a>]]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#id Config#id}.
+part block.
 
-Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#part Config#part}
 
 ---
 
@@ -177,7 +172,7 @@ If you experience problems setting this value it might not be settable. Please t
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.resetBase64Encode">reset_base64_encode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.resetBoundary">reset_boundary</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.resetGzip">reset_gzip</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-cloudinit.config.Config.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.config.Config.resetPart">reset_part</a></code> | *No description.* |
 
 ---
 
@@ -422,10 +417,10 @@ def reset_boundary() -> None
 def reset_gzip() -> None
 ```
 
-##### `reset_id` <a name="reset_id" id="@cdktf/provider-cloudinit.config.Config.resetId"></a>
+##### `reset_part` <a name="reset_part" id="@cdktf/provider-cloudinit.config.Config.resetPart"></a>
 
 ```python
-def reset_id() -> None
+def reset_part() -> None
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
@@ -522,17 +517,16 @@ config.Config.is_terraform_resource(
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.config.Config.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.part">part</a></code> | <code><a href="#@cdktf/provider-cloudinit.config.ConfigPartList">ConfigPartList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.rendered">rendered</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.base64EncodeInput">base64_encode_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.boundaryInput">boundary_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.gzipInput">gzip_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-cloudinit.config.Config.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.partInput">part_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-cloudinit.config.ConfigPart">ConfigPart</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.base64Encode">base64_encode</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.boundary">boundary</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.gzip">gzip</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-cloudinit.config.Config.property.id">id</a></code> | <code>str</code> | *No description.* |
 
 ---
 
@@ -678,6 +672,16 @@ provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, Re
 
 ---
 
+##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-cloudinit.config.Config.property.id"></a>
+
+```python
+id: str
+```
+
+- *Type:* str
+
+---
+
 ##### `part`<sup>Required</sup> <a name="part" id="@cdktf/provider-cloudinit.config.Config.property.part"></a>
 
 ```python
@@ -728,16 +732,6 @@ gzip_input: typing.Union[bool, IResolvable]
 
 ---
 
-##### `id_input`<sup>Optional</sup> <a name="id_input" id="@cdktf/provider-cloudinit.config.Config.property.idInput"></a>
-
-```python
-id_input: str
-```
-
-- *Type:* str
-
----
-
 ##### `part_input`<sup>Optional</sup> <a name="part_input" id="@cdktf/provider-cloudinit.config.Config.property.partInput"></a>
 
 ```python
@@ -778,16 +772,6 @@ gzip: typing.Union[bool, IResolvable]
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-cloudinit.config.Config.property.id"></a>
-
-```python
-id: str
-```
-
-- *Type:* str
-
----
-
 #### Constants <a name="Constants" id="Constants"></a>
 
 | **Name** | **Type** | **Description** |
@@ -823,11 +807,10 @@ config.ConfigConfig(
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
   provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
-  part: typing.Union[IResolvable, typing.List[ConfigPart]],
   base64_encode: typing.Union[bool, IResolvable] = None,
   boundary: str = None,
   gzip: typing.Union[bool, IResolvable] = None,
-  id: str = None
+  part: typing.Union[IResolvable, typing.List[ConfigPart]] = None
 )
 ```
 
@@ -842,11 +825,10 @@ config.ConfigConfig(
 | <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.base64Encode">base64_encode</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Specify whether or not to base64 encode the `rendered` output. |
+| <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.boundary">boundary</a></code> | <code>str</code> | Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`. |
+| <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.gzip">gzip</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Specify whether or not to gzip the `rendered` output. Defaults to `true`. |
 | <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.part">part</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-cloudinit.config.ConfigPart">ConfigPart</a>]]</code> | part block. |
-| <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.base64Encode">base64_encode</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#base64_encode Config#base64_encode}. |
-| <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.boundary">boundary</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#boundary Config#boundary}. |
-| <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.gzip">gzip</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#gzip Config#gzip}. |
-| <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#id Config#id}. |
 
 ---
 
@@ -920,20 +902,6 @@ provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, Re
 
 ---
 
-##### `part`<sup>Required</sup> <a name="part" id="@cdktf/provider-cloudinit.config.ConfigConfig.property.part"></a>
-
-```python
-part: typing.Union[IResolvable, typing.List[ConfigPart]]
-```
-
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-cloudinit.config.ConfigPart">ConfigPart</a>]]
-
-part block.
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#part Config#part}
-
----
-
 ##### `base64_encode`<sup>Optional</sup> <a name="base64_encode" id="@cdktf/provider-cloudinit.config.ConfigConfig.property.base64Encode"></a>
 
 ```python
@@ -942,7 +910,11 @@ base64_encode: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#base64_encode Config#base64_encode}.
+Specify whether or not to base64 encode the `rendered` output.
+
+Defaults to `true`, and cannot be disabled if gzip is `true`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#base64_encode Config#base64_encode}
 
 ---
 
@@ -954,7 +926,9 @@ boundary: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#boundary Config#boundary}.
+Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#boundary Config#boundary}
 
 ---
 
@@ -966,22 +940,23 @@ gzip: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#gzip Config#gzip}.
+Specify whether or not to gzip the `rendered` output. Defaults to `true`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#gzip Config#gzip}
 
 ---
 
-##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-cloudinit.config.ConfigConfig.property.id"></a>
+##### `part`<sup>Optional</sup> <a name="part" id="@cdktf/provider-cloudinit.config.ConfigConfig.property.part"></a>
 
 ```python
-id: str
+part: typing.Union[IResolvable, typing.List[ConfigPart]]
 ```
 
-- *Type:* str
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-cloudinit.config.ConfigPart">ConfigPart</a>]]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#id Config#id}.
+part block.
 
-Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#part Config#part}
 
 ---
 
@@ -1004,10 +979,10 @@ config.ConfigPart(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-cloudinit.config.ConfigPart.property.content">content</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content Config#content}. |
-| <code><a href="#@cdktf/provider-cloudinit.config.ConfigPart.property.contentType">content_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content_type Config#content_type}. |
-| <code><a href="#@cdktf/provider-cloudinit.config.ConfigPart.property.filename">filename</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#filename Config#filename}. |
-| <code><a href="#@cdktf/provider-cloudinit.config.ConfigPart.property.mergeType">merge_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#merge_type Config#merge_type}. |
+| <code><a href="#@cdktf/provider-cloudinit.config.ConfigPart.property.content">content</a></code> | <code>str</code> | Body content for the part. |
+| <code><a href="#@cdktf/provider-cloudinit.config.ConfigPart.property.contentType">content_type</a></code> | <code>str</code> | A MIME-style content type to report in the header for the part. Defaults to `text/plain`. |
+| <code><a href="#@cdktf/provider-cloudinit.config.ConfigPart.property.filename">filename</a></code> | <code>str</code> | A filename to report in the header for the part. |
+| <code><a href="#@cdktf/provider-cloudinit.config.ConfigPart.property.mergeType">merge_type</a></code> | <code>str</code> | A value for the `X-Merge-Type` header of the part, to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/reference/merging.html). |
 
 ---
 
@@ -1019,7 +994,9 @@ content: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content Config#content}.
+Body content for the part.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content Config#content}
 
 ---
 
@@ -1031,7 +1008,9 @@ content_type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content_type Config#content_type}.
+A MIME-style content type to report in the header for the part. Defaults to `text/plain`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content_type Config#content_type}
 
 ---
 
@@ -1043,7 +1022,9 @@ filename: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#filename Config#filename}.
+A filename to report in the header for the part.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#filename Config#filename}
 
 ---
 
@@ -1055,7 +1036,9 @@ merge_type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#merge_type Config#merge_type}.
+A value for the `X-Merge-Type` header of the part, to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/reference/merging.html).
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#merge_type Config#merge_type}
 
 ---
 
