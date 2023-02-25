@@ -242,7 +242,7 @@ export class Config extends cdktf.TerraformResource {
       terraformResourceType: 'cloudinit_config',
       terraformGeneratorMetadata: {
         providerName: 'cloudinit',
-        providerVersion: '2.3.1',
+        providerVersion: '2.3.2',
         providerVersionConstraint: '~> 2.2'
       },
       provider: config.provider,
