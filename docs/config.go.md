@@ -1,6 +1,6 @@
 # `cloudinit_config`
 
-Refer to the Terraform Registory for docs: [`cloudinit_config`](https://www.terraform.io/docs/providers/cloudinit/r/config).
+Refer to the Terraform Registory for docs: [`cloudinit_config`](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config).
 
 # `config` Submodule <a name="`config` Submodule" id="@cdktf/provider-cloudinit.config"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`cloudinit_config`](https://www.terr
 
 ### Config <a name="Config" id="@cdktf/provider-cloudinit.config.Config"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/cloudinit/r/config cloudinit_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config cloudinit_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.config.Config.Initializer"></a>
 
@@ -380,7 +380,7 @@ config.Config_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-cloudinit.config.Config.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.config.Config.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.Config.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -484,10 +484,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-cloudinit.config.Config.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -670,7 +670,7 @@ import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v6/config"
 
 &config.ConfigConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -688,7 +688,7 @@ import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v6/config"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.ConfigConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -714,10 +714,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-cloudinit.config.ConfigConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -783,7 +783,7 @@ Specify whether or not to base64 encode the `rendered` output.
 
 Defaults to `true`, and cannot be disabled if gzip is `true`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#base64_encode Config#base64_encode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#base64_encode Config#base64_encode}
 
 ---
 
@@ -797,7 +797,7 @@ Boundary *string
 
 Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#boundary Config#boundary}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#boundary Config#boundary}
 
 ---
 
@@ -811,7 +811,7 @@ Gzip interface{}
 
 Specify whether or not to gzip the `rendered` output. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#gzip Config#gzip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#gzip Config#gzip}
 
 ---
 
@@ -825,7 +825,7 @@ Part interface{}
 
 part block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#part Config#part}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#part Config#part}
 
 ---
 
@@ -865,7 +865,7 @@ Content *string
 
 Body content for the part.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content Config#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#content Config#content}
 
 ---
 
@@ -879,7 +879,7 @@ ContentType *string
 
 A MIME-style content type to report in the header for the part. Defaults to `text/plain`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#content_type Config#content_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#content_type Config#content_type}
 
 ---
 
@@ -893,7 +893,7 @@ Filename *string
 
 A filename to report in the header for the part.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#filename Config#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#filename Config#filename}
 
 ---
 
@@ -907,7 +907,7 @@ MergeType *string
 
 A value for the `X-Merge-Type` header of the part, to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/reference/merging.html).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#merge_type Config#merge_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#merge_type Config#merge_type}
 
 ---
 

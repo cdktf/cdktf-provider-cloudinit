@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/cloudinit
+// https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface CloudinitProviderConfig {
   /**
   * Alias name
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit#alias CloudinitProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs#alias CloudinitProvider#alias}
   */
   readonly alias?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/cloudinit cloudinit}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs cloudinit}
 */
 export class CloudinitProvider extends cdktf.TerraformProvider {
 
@@ -30,7 +30,7 @@ export class CloudinitProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/cloudinit cloudinit} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs cloudinit} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

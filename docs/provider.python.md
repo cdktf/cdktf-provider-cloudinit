@@ -1,6 +1,6 @@
 # `provider`
 
-Refer to the Terraform Registory for docs: [`cloudinit`](https://www.terraform.io/docs/providers/cloudinit).
+Refer to the Terraform Registory for docs: [`cloudinit`](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs).
 
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-cloudinit.provider"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`cloudinit`](https://www.terraform.i
 
 ### CloudinitProvider <a name="CloudinitProvider" id="@cdktf/provider-cloudinit.provider.CloudinitProvider"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/cloudinit cloudinit}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs cloudinit}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.provider.CloudinitProvider.Initializer"></a>
 
@@ -54,7 +54,7 @@ Must be unique amongst siblings in the same scope
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit#alias CloudinitProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs#alias CloudinitProvider#alias}
 
 ---
 
@@ -392,7 +392,7 @@ alias: str
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit#alias CloudinitProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs#alias CloudinitProvider#alias}
 
 ---
 

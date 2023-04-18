@@ -1,6 +1,6 @@
 # `data_cloudinit_config`
 
-Refer to the Terraform Registory for docs: [`data_cloudinit_config`](https://www.terraform.io/docs/providers/cloudinit/d/config).
+Refer to the Terraform Registory for docs: [`data_cloudinit_config`](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config).
 
 # `dataCloudinitConfig` Submodule <a name="`dataCloudinitConfig` Submodule" id="@cdktf/provider-cloudinit.dataCloudinitConfig"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_cloudinit_config`](https://www
 
 ### DataCloudinitConfig <a name="DataCloudinitConfig" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/cloudinit/d/config cloudinit_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config cloudinit_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer"></a>
 
@@ -379,7 +379,7 @@ datacloudinitconfig.DataCloudinitConfig_IsTerraformDataSource(x interface{}) *bo
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -472,10 +472,10 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -648,7 +648,7 @@ import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v6/datacloudinitc
 
 &datacloudinitconfig.DataCloudinitConfigConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -666,7 +666,7 @@ import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v6/datacloudinitc
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -692,10 +692,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -761,7 +761,7 @@ Specify whether or not to base64 encode the `rendered` output.
 
 Defaults to `true`, and cannot be disabled if gzip is `true`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#base64_encode DataCloudinitConfig#base64_encode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#base64_encode DataCloudinitConfig#base64_encode}
 
 ---
 
@@ -775,7 +775,7 @@ Boundary *string
 
 Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#boundary DataCloudinitConfig#boundary}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#boundary DataCloudinitConfig#boundary}
 
 ---
 
@@ -789,7 +789,7 @@ Gzip interface{}
 
 Specify whether or not to gzip the `rendered` output. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#gzip DataCloudinitConfig#gzip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#gzip DataCloudinitConfig#gzip}
 
 ---
 
@@ -803,7 +803,7 @@ Part interface{}
 
 part block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#part DataCloudinitConfig#part}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#part DataCloudinitConfig#part}
 
 ---
 
@@ -843,7 +843,7 @@ Content *string
 
 Body content for the part.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content DataCloudinitConfig#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#content DataCloudinitConfig#content}
 
 ---
 
@@ -857,7 +857,7 @@ ContentType *string
 
 A MIME-style content type to report in the header for the part. Defaults to `text/plain`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#content_type DataCloudinitConfig#content_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#content_type DataCloudinitConfig#content_type}
 
 ---
 
@@ -871,7 +871,7 @@ Filename *string
 
 A filename to report in the header for the part.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#filename DataCloudinitConfig#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#filename DataCloudinitConfig#filename}
 
 ---
 
@@ -885,7 +885,7 @@ MergeType *string
 
 A value for the `X-Merge-Type` header of the part, to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/reference/merging.html).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#merge_type DataCloudinitConfig#merge_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#merge_type DataCloudinitConfig#merge_type}
 
 ---
 
