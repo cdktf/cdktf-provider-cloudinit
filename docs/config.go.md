@@ -1,3 +1,7 @@
+# `cloudinit_config`
+
+Refer to the Terraform Registory for docs: [`cloudinit_config`](https://www.terraform.io/docs/providers/cloudinit/r/config).
+
 # `config` Submodule <a name="`config` Submodule" id="@cdktf/provider-cloudinit.config"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
