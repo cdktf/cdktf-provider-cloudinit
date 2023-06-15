@@ -1296,7 +1296,7 @@ public resetMergeType(): void
 | <code><a href="#@cdktf/provider-cloudinit.config.ConfigPartOutputReference.property.contentType">contentType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.ConfigPartOutputReference.property.filename">filename</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.config.ConfigPartOutputReference.property.mergeType">mergeType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-cloudinit.config.ConfigPartOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-cloudinit.config.ConfigPart">ConfigPart</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-cloudinit.config.ConfigPartOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-cloudinit.config.ConfigPart">ConfigPart</a></code> | *No description.* |
 
 ---
 
@@ -1407,10 +1407,10 @@ public readonly mergeType: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-cloudinit.config.ConfigPartOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ConfigPart | IResolvable;
+public readonly internalValue: IResolvable | ConfigPart;
 ```
 
-- *Type:* <a href="#@cdktf/provider-cloudinit.config.ConfigPart">ConfigPart</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-cloudinit.config.ConfigPart">ConfigPart</a>
 
 ---
 
