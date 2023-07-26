@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config
 // generated from terraform resource schema
 
@@ -14,25 +9,25 @@ import * as cdktf from 'cdktf';
 export interface ConfigConfig extends cdktf.TerraformMetaArguments {
   /**
   * Specify whether or not to base64 encode the `rendered` output. Defaults to `true`, and cannot be disabled if gzip is `true`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#base64_encode Config#base64_encode}
   */
   readonly base64Encode?: boolean | cdktf.IResolvable;
   /**
   * Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#boundary Config#boundary}
   */
   readonly boundary?: string;
   /**
   * Specify whether or not to gzip the `rendered` output. Defaults to `true`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#gzip Config#gzip}
   */
   readonly gzip?: boolean | cdktf.IResolvable;
   /**
   * part block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#part Config#part}
   */
   readonly part?: ConfigPart[] | cdktf.IResolvable;
@@ -40,25 +35,25 @@ export interface ConfigConfig extends cdktf.TerraformMetaArguments {
 export interface ConfigPart {
   /**
   * Body content for the part.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#content Config#content}
   */
   readonly content: string;
   /**
   * A MIME-style content type to report in the header for the part. Defaults to `text/plain`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#content_type Config#content_type}
   */
   readonly contentType?: string;
   /**
   * A filename to report in the header for the part.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#filename Config#filename}
   */
   readonly filename?: string;
   /**
   * A value for the `X-Merge-Type` header of the part, to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/reference/merging.html).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config#merge_type Config#merge_type}
   */
   readonly mergeType?: string;
