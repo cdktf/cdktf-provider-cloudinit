@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface CloudinitProviderConfig {
   /**
   * Alias name
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs#alias CloudinitProvider#alias}
   */
   readonly alias?: string;
