@@ -1,7 +1,9 @@
 
-# Terraform CDK cloudinit Provider ~> 2.2
+# Terraform CDK cloudinit Provider tracks ~> 2.2
 
 This repo builds and publishes the Terraform cloudinit Provider bindings for [CDK for Terraform](https://cdk.tf).
+
+Is based directly on cloudinit 2.3.2
 
 ## Available Packages
 
@@ -61,7 +63,7 @@ This project is explicitly not tracking the Terraform cloudinit Provider version
 These are the upstream dependencies:
 
 - [Terraform CDK](https://cdk.tf)
-- [Terraform cloudinit Provider](https://registry.terraform.io/providers/hashicorp/cloudinit/2.2.0)
+- [Terraform cloudinit Provider](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2)
     - This links to the minimum version being tracked, you can find the latest released version [in our releases](https://github.com/cdktf/cdktf-provider-cloudinit/releases)
 - [Terraform Engine](https://terraform.io)
 
