@@ -1,7 +1,3 @@
-# `data_cloudinit_config`
-
-Refer to the Terraform Registory for docs: [`data_cloudinit_config`](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config).
-
 # `dataCloudinitConfig` Submodule <a name="`dataCloudinitConfig` Submodule" id="@cdktf/provider-cloudinit.dataCloudinitConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
