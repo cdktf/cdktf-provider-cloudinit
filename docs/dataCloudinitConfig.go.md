@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
 
 datacloudinitconfig.NewDataCloudinitConfig(scope Construct, id *string, config DataCloudinitConfigConfig) DataCloudinitConfig
 ```
@@ -308,7 +308,7 @@ func ResetPart()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_IsConstruct(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ datacloudinitconfig.DataCloudinitConfig_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -368,7 +368,7 @@ datacloudinitconfig.DataCloudinitConfig_IsTerraformDataSource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -685,7 +685,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
 
 &datacloudinitconfig.DataCloudinitConfigConfig {
 	Connection: interface{},
@@ -853,7 +853,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
 
 &datacloudinitconfig.DataCloudinitConfigPart {
 	Content: *string,
@@ -937,7 +937,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
 
 datacloudinitconfig.NewDataCloudinitConfigPartList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataCloudinitConfigPartList
 ```
@@ -1080,7 +1080,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
 
 datacloudinitconfig.NewDataCloudinitConfigPartOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataCloudinitConfigPartOutputReference
 ```
