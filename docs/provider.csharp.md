@@ -1,7 +1,3 @@
-# `provider`
-
-Refer to the Terraform Registory for docs: [`cloudinit`](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs).
-
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-cloudinit.provider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
