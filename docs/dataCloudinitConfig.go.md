@@ -4,12 +4,12 @@
 
 ### DataCloudinitConfig <a name="DataCloudinitConfig" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config cloudinit_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config cloudinit_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
 
 datacloudinitconfig.NewDataCloudinitConfig(scope Construct, id *string, config DataCloudinitConfigConfig) DataCloudinitConfig
 ```
@@ -308,7 +308,7 @@ func ResetPart()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_IsConstruct(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ datacloudinitconfig.DataCloudinitConfig_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -368,7 +368,7 @@ datacloudinitconfig.DataCloudinitConfig_IsTerraformDataSource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -397,7 +397,7 @@ The construct id used in the generated config for the DataCloudinitConfig to imp
 
 The id of the existing DataCloudinitConfig that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -685,7 +685,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
 
 &datacloudinitconfig.DataCloudinitConfigConfig {
 	Connection: interface{},
@@ -802,7 +802,7 @@ Specify whether or not to base64 encode the `rendered` output.
 
 Defaults to `true`, and cannot be disabled if gzip is `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#base64_encode DataCloudinitConfig#base64_encode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#base64_encode DataCloudinitConfig#base64_encode}
 
 ---
 
@@ -816,7 +816,7 @@ Boundary *string
 
 Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#boundary DataCloudinitConfig#boundary}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#boundary DataCloudinitConfig#boundary}
 
 ---
 
@@ -830,7 +830,7 @@ Gzip interface{}
 
 Specify whether or not to gzip the `rendered` output. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#gzip DataCloudinitConfig#gzip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#gzip DataCloudinitConfig#gzip}
 
 ---
 
@@ -844,7 +844,7 @@ Part interface{}
 
 part block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#part DataCloudinitConfig#part}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#part DataCloudinitConfig#part}
 
 ---
 
@@ -853,7 +853,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
 
 &datacloudinitconfig.DataCloudinitConfigPart {
 	Content: *string,
@@ -884,7 +884,7 @@ Content *string
 
 Body content for the part.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#content DataCloudinitConfig#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#content DataCloudinitConfig#content}
 
 ---
 
@@ -898,7 +898,7 @@ ContentType *string
 
 A MIME-style content type to report in the header for the part. Defaults to `text/plain`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#content_type DataCloudinitConfig#content_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#content_type DataCloudinitConfig#content_type}
 
 ---
 
@@ -912,7 +912,7 @@ Filename *string
 
 A filename to report in the header for the part.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#filename DataCloudinitConfig#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#filename DataCloudinitConfig#filename}
 
 ---
 
@@ -926,7 +926,7 @@ MergeType *string
 
 A value for the `X-Merge-Type` header of the part, to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/reference/merging.html).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/data-sources/config#merge_type DataCloudinitConfig#merge_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#merge_type DataCloudinitConfig#merge_type}
 
 ---
 
@@ -937,7 +937,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
 
 datacloudinitconfig.NewDataCloudinitConfigPartList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataCloudinitConfigPartList
 ```
@@ -1080,7 +1080,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/datacloudinitconfig"
 
 datacloudinitconfig.NewDataCloudinitConfigPartOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataCloudinitConfigPartOutputReference
 ```
