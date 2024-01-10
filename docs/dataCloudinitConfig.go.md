@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/datacloudinitconfig"
 
 datacloudinitconfig.NewDataCloudinitConfig(scope Construct, id *string, config DataCloudinitConfigConfig) DataCloudinitConfig
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -123,6 +124,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.toMetadata"></a>
 
@@ -308,7 +317,7 @@ func ResetPart()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_IsConstruct(x interface{}) *bool
 ```
@@ -340,7 +349,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -354,7 +363,7 @@ datacloudinitconfig.DataCloudinitConfig_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -368,7 +377,7 @@ datacloudinitconfig.DataCloudinitConfig_IsTerraformDataSource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/datacloudinitconfig"
 
 datacloudinitconfig.DataCloudinitConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -685,7 +694,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/datacloudinitconfig"
 
 &datacloudinitconfig.DataCloudinitConfigConfig {
 	Connection: interface{},
@@ -853,7 +862,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/datacloudinitconfig"
 
 &datacloudinitconfig.DataCloudinitConfigPart {
 	Content: *string,
@@ -937,7 +946,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/datacloudinitconfig"
 
 datacloudinitconfig.NewDataCloudinitConfigPartList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataCloudinitConfigPartList
 ```
@@ -978,10 +987,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1080,7 +1106,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/datacloudinitconfig"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/datacloudinitconfig"
 
 datacloudinitconfig.NewDataCloudinitConfigPartOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataCloudinitConfigPartOutputReference
 ```

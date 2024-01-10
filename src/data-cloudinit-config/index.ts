@@ -77,6 +77,43 @@ export function dataCloudinitConfigPartToTerraform(struct?: DataCloudinitConfigP
   }
 }
 
+
+export function dataCloudinitConfigPartToHclTerraform(struct?: DataCloudinitConfigPart | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content: {
+      value: cdktf.stringToHclTerraform(struct!.content),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    content_type: {
+      value: cdktf.stringToHclTerraform(struct!.contentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    filename: {
+      value: cdktf.stringToHclTerraform(struct!.filename),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    merge_type: {
+      value: cdktf.stringToHclTerraform(struct!.mergeType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataCloudinitConfigPartOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -367,5 +404,37 @@ export class DataCloudinitConfig extends cdktf.TerraformDataSource {
       gzip: cdktf.booleanToTerraform(this._gzip),
       part: cdktf.listMapper(dataCloudinitConfigPartToTerraform, true)(this._part.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      base64_encode: {
+        value: cdktf.booleanToHclTerraform(this._base64Encode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      boundary: {
+        value: cdktf.stringToHclTerraform(this._boundary),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gzip: {
+        value: cdktf.booleanToHclTerraform(this._gzip),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      part: {
+        value: cdktf.listMapperHcl(dataCloudinitConfigPartToHclTerraform, true)(this._part.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataCloudinitConfigPartList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }
