@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs
+// https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,13 +10,13 @@ export interface CloudinitProviderConfig {
   /**
   * Alias name
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs#alias CloudinitProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs#alias CloudinitProvider#alias}
   */
   readonly alias?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs cloudinit}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs cloudinit}
 */
 export class CloudinitProvider extends cdktf.TerraformProvider {
 
@@ -37,7 +32,7 @@ export class CloudinitProvider extends cdktf.TerraformProvider {
   * Generates CDKTF code for importing a CloudinitProvider resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CloudinitProvider to import
-  * @param importFromId The id of the existing CloudinitProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CloudinitProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CloudinitProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -49,7 +44,7 @@ export class CloudinitProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs cloudinit} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs cloudinit} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -60,7 +55,7 @@ export class CloudinitProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'cloudinit',
       terraformGeneratorMetadata: {
         providerName: 'cloudinit',
-        providerVersion: '2.3.3',
+        providerVersion: '2.3.4',
         providerVersionConstraint: '~> 2.2'
       },
       terraformProviderSource: 'hashicorp/cloudinit'

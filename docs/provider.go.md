@@ -4,12 +4,12 @@
 
 ### CloudinitProvider <a name="CloudinitProvider" id="@cdktf/provider-cloudinit.provider.CloudinitProvider"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs cloudinit}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs cloudinit}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.provider.CloudinitProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/provider"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/provider"
 
 provider.NewCloudinitProvider(scope Construct, id *string, config CloudinitProviderConfig) CloudinitProvider
 ```
@@ -151,7 +151,7 @@ func ResetAlias()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-cloudinit.provider.CloudinitProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/provider"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/provider"
 
 provider.CloudinitProvider_IsConstruct(x interface{}) *bool
 ```
@@ -183,7 +183,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-cloudinit.provider.CloudinitProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/provider"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/provider"
 
 provider.CloudinitProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -197,7 +197,7 @@ provider.CloudinitProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-cloudinit.provider.CloudinitProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/provider"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/provider"
 
 provider.CloudinitProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -211,7 +211,7 @@ provider.CloudinitProvider_IsTerraformProvider(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-cloudinit.provider.CloudinitProvider.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/provider"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/provider"
 
 provider.CloudinitProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -240,7 +240,7 @@ The construct id used in the generated config for the CloudinitProvider to impor
 
 The id of the existing CloudinitProvider that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -396,7 +396,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-cloudinit.provider.CloudinitProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v10/provider"
+import "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/provider"
 
 &provider.CloudinitProviderConfig {
 	Alias: *string,
@@ -421,7 +421,7 @@ Alias *string
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs#alias CloudinitProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs#alias CloudinitProvider#alias}
 
 ---
 
