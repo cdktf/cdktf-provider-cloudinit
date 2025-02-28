@@ -4,7 +4,7 @@
 
 ### Config <a name="Config" id="@cdktf/provider-cloudinit.config.Config"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5/docs/resources/config cloudinit_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.6/docs/resources/config cloudinit_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-cloudinit.config.Config.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the Config to import.
 
 The id of the existing Config that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5/docs/resources/config#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.6/docs/resources/config#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -935,7 +935,7 @@ Specify whether or not to base64 encode the `rendered` output.
 
 Defaults to `true`, and cannot be disabled if gzip is `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5/docs/resources/config#base64_encode Config#base64_encode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.6/docs/resources/config#base64_encode Config#base64_encode}
 
 ---
 
@@ -949,7 +949,7 @@ public string Boundary { get; set; }
 
 Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5/docs/resources/config#boundary Config#boundary}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.6/docs/resources/config#boundary Config#boundary}
 
 ---
 
@@ -963,7 +963,7 @@ public object Gzip { get; set; }
 
 Specify whether or not to gzip the `rendered` output. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5/docs/resources/config#gzip Config#gzip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.6/docs/resources/config#gzip Config#gzip}
 
 ---
 
@@ -977,7 +977,7 @@ public object Part { get; set; }
 
 part block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5/docs/resources/config#part Config#part}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.6/docs/resources/config#part Config#part}
 
 ---
 
@@ -1017,7 +1017,7 @@ public string Content { get; set; }
 
 Body content for the part.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5/docs/resources/config#content Config#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.6/docs/resources/config#content Config#content}
 
 ---
 
@@ -1031,7 +1031,7 @@ public string ContentType { get; set; }
 
 A MIME-style content type to report in the header for the part. Defaults to `text/plain`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5/docs/resources/config#content_type Config#content_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.6/docs/resources/config#content_type Config#content_type}
 
 ---
 
@@ -1045,7 +1045,7 @@ public string Filename { get; set; }
 
 A filename to report in the header for the part.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5/docs/resources/config#filename Config#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.6/docs/resources/config#filename Config#filename}
 
 ---
 
@@ -1059,7 +1059,7 @@ public string MergeType { get; set; }
 
 A value for the `X-Merge-Type` header of the part, to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/reference/merging.html).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5/docs/resources/config#merge_type Config#merge_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.6/docs/resources/config#merge_type Config#merge_type}
 
 ---
 
